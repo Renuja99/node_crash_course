@@ -18,11 +18,21 @@ console.log("hello");
 
 
 //writing files
+
+// ***__________re-writing on an existing file_________***
+
 fs.writeFile('./docs/blog1.txt', 'hello, world' , ()=>{
 
     console.log('file was written');
 })
 
+
+// **___________creates a new file and writes the given string
+
+fs.writeFile('./docs/blog1.txt', 'hello, world' , ()=>{
+
+    console.log('file was written');
+})
 
 // directories
 
