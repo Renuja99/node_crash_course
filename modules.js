@@ -4,7 +4,10 @@ console.log(xyz.people , xyz.ages);
 
 
 // ** A similar way to get the same output as above
-const {people, ages} = require('./people');
+const {people, ages , location} = require('./people');
 
-console.log(people , ages );  
+console.log(people , ages , location );  
+
+
+
 
