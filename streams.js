@@ -13,3 +13,12 @@ readStream.on('data', (chunk)=> {
 
 
 //? the fs module createReadStream is passed two arguments. the first argument is going to say where we pass data from to the stream and where we want to read data from . The second argument converts the chunk of data into a readable format.
+
+
+const writeStream = fs.createWriteStream('./docs/blog4.txt');
+
+readStream.on('data', (chunk)=>{
+
+    writeStream.write('\n----NEW CHUNK---\n');
+    writeStream.write(chunk);
+});
