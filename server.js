@@ -8,7 +8,24 @@
     // set header content type
     //? The response headers give more information to the browser about what kind of response is coming back to it.
 
-   //  res.setHeader('Content-type', 'text/html' );
+    res.setHeader('Content-type', 'text/html' );
+
+    
+    let path = './views/';
+    switch(req.url){
+       case '/':
+          path += 'index.html';
+          break;
+
+       case '/about':
+          path += 'about.html';
+          break;
+
+       default:
+          path += '404.html';
+          break;
+
+    }
    //  res.write('<p>Hello Ninjas</p>');
    //  res.write('<p>Hello again Ninjas</p>');
    //  res.end();
@@ -19,7 +36,7 @@
 
     //sending an html file
 
-    fs.readFile('./views/index.html', (err, data)=>{
+    fs.readFile(path , (err, data)=>{
        if(err){
           console.log(err);
           res.end();
